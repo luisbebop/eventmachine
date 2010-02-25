@@ -167,7 +167,7 @@ SslContext_t::SslContext_t (bool is_server, const string &privkeyfile, const str
 		assert (e > 0);
 	}
 
-	SSL_CTX_set_cipher_list (pCtx, "ALL:!ADH:!LOW:!EXP:!DES-CBC3-SHA:@STRENGTH");
+	// SSL_CTX_set_cipher_list (pCtx, "ALL:!ADH:!LOW:!EXP:!DES-CBC3-SHA:@STRENGTH");
 
 	if (is_server) {
 		SSL_CTX_sess_set_cache_size (pCtx, 128);
